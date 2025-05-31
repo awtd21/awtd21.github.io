@@ -115,17 +115,76 @@ bouton_fermer.addEventListener('click', function(){
   body.classList.remove('open')
 })
 
-function openLightboxGalerie(){
-  document.querySelector('.galerie_lightbox').style.display = 'flex';
-  document.querySelector('footer').style.display = 'none';
+// Création d'un lightbox en cliquant sur l'image de la page galerie
+function openLightboxGalerie(element) {
+  const lightbox = element.nextElementSibling;
+  if (lightbox && lightbox.classList.contains('galerie_lightbox')) {
+    lightbox.style.display = 'flex';
+    document.querySelector('footer').style.display = 'none';
+
+    // Ajout du gestionnaire de clic pour fermer en dehors
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightboxGalerie(e.target);
+    });
+  }
 }
-function closeLightboxGalerie(){
-  document.querySelector('.galerie_lightbox').style.display = 'none';
-  document.querySelector('footer').style.display = 'block';
+
+function closeLightboxGalerie(element) {
+  const lightbox = element.closest('.galerie_lightbox');
+  if (lightbox) {
+    lightbox.style.display = 'none';
+    document.querySelector('footer').style.display = 'block';
+  }
 }
-const lightboxGalerie = document.querySelector('.galerie_lightbox');
-if (lightboxGalerie) {
-  lightboxGalerie.addEventListener('click', function(e) {
-    if (e.target === this) closeLightboxGalerie();
-  });
+
+document.querySelectorAll('.galerie_onglet > div').forEach(dossier => {
+  // Récupérer toutes les images sauf celle du bouton exit
+  const images = Array.from(dossier.querySelectorAll('.galerie_lightbox img[src]'))
+                      .map(img => img.src)
+                      .filter(src => !src.includes('icone/exit.png'));
+
+  // Choisir une image au hasard ou image par défaut
+  let imgChoisie;
+  if (images.length > 0) {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgChoisie = images[randomIndex];
+  } else {
+    imgChoisie = 'photo/camera.png';
+  }
+
+  // Appliquer en background au h4
+  const h4 = dossier.querySelector('h4');
+  if (h4) {
+    h4.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${imgChoisie}')`;
+    h4.style.backgroundSize = '100% auto';
+    h4.style.backgroundRepeat = 'no-repeat';
+    h4.style.backgroundPosition = 'center center';
+  }
+});
+
+
+// 1. Récupérer toutes les images des lightbox sauf celles des dossiers vides
+const toutesImages = [];
+
+document.querySelectorAll('.galerie_lightbox').forEach(lightbox => {
+  const images = Array.from(lightbox.querySelectorAll('img[src]'))
+                      .filter(img => !img.src.includes('icone/exit.png'));
+  if (images.length > 0) {
+    images.forEach(img => toutesImages.push(img.src));
+  }
+});
+
+// 2. Appliquer le diaporama si au moins une image est trouvée
+const imageAccueil = document.getElementById('image_accueil_galerie');
+
+if (imageAccueil && toutesImages.length > 0) {
+  let index = Math.floor(Math.random() * toutesImages.length); // démarrage aléatoire
+  // Fonction pour changer l’image
+  const changerImage = () => {
+    imageAccueil.src = toutesImages[index];
+    index = (index + 1) % toutesImages.length; // boucle circulaire
+  };
+  changerImage(); // afficher la première
+  // Défilement toutes les 5 secondes
+  setInterval(changerImage, 5000);
 }
