@@ -70,15 +70,20 @@ h3{
   font-weight: bold;
 }
 h4{
-  font-size: 3vmin;
+  display: flex;
+  width: 10vmax;
+  min-height : 10vmax;
+  font-size: 1vmax;
   font-weight: bold;
-  background-color: rgb(255, 255, 118);
-  border: #ffff00;
   cursor: pointer;
   padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: black;
+  color: #ffff00;
   margin : 0.5rem 0;
+  border-radius: 20%;
+
 }
 #menu_principale{
   color: #ffff00;
@@ -156,7 +161,7 @@ h4{
   max-width: 35vw;
 	height: auto;
 }
-#image_accueil_problème{
+.image_accueil_problème{
   object-position: top;
 }
 .photo-accueil{
@@ -481,8 +486,8 @@ h4{
   background-color: rgba(0, 0, 0, 0.20);
 }
 .galerie{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .galerie_lightbox{
   position: absolute;
@@ -490,10 +495,11 @@ h4{
   left: 0;
   background-color: rgba(0, 0, 0, 0.75);
   display: none;
-  padding: 5vw;
+  padding: 5%;
   align-items: flex-start;
   gap : 2.5vmin;
   min-height: 150%;
+  width: 90%
 }
 .colonne_image{
   display: flex;
@@ -505,7 +511,13 @@ h4{
   height: auto;
   border: 0.25vw solid rgba(255, 255, 255, 0.5);
 }
+#image_accueil_galerie{
+  justify-content: left;
+  width: 40vw;
+  height: auto;
+  margin: 0 5% 5% 0;
+  border-radius: 5%;
+}
 .galerie_onglet{
- background-color: rgba(0, 0, 0, 0.3);
- padding: 0.5rem 1rem;
+  padding-left: 5%;
 }
