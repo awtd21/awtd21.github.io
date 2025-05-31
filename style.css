@@ -158,7 +158,7 @@ h4{
   max-width: 35vw;
 	height: auto;
 }
-.image_accueil_problème{
+.image_accueil_probleme{
   object-position: top;
 }
 .photo-accueil{
@@ -346,7 +346,7 @@ h4{
   #titre_accueil_apr{
     display: block;
   }
-  .image_accueil_problème{
+  .image_accueil_probleme{
     object-position: top;
   }
   .photo-accueil img{
@@ -369,7 +369,7 @@ h4{
   #titre_accueil_avt{
     display: block;
   }
-  .image_accueil_problème{
+  .image_accueil_probleme{
     object-position: top;
   }
 }
