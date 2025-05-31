@@ -158,9 +158,6 @@ h4{
   max-width: 35vw;
 	height: auto;
 }
-.image_accueil_probleme{
-  object-position: top;
-}
 .photo-accueil{
   background-color: grey;
   display: grid;
@@ -346,9 +343,6 @@ h4{
   #titre_accueil_apr{
     display: block;
   }
-  .image_accueil_probleme{
-    object-position: top;
-  }
   .photo-accueil img{
     aspect-ratio: 1/1;
     max-width :31vw;
@@ -368,9 +362,6 @@ h4{
   }
   #titre_accueil_avt{
     display: block;
-  }
-  .image_accueil_probleme{
-    object-position: top;
   }
 }
 @media (min-width:600px){
