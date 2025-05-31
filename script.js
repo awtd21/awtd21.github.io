@@ -141,7 +141,7 @@ document.querySelectorAll('.galerie_onglet > div').forEach(dossier => {
   // Récupérer toutes les images sauf celle du bouton exit
   const images = Array.from(dossier.querySelectorAll('.galerie_lightbox img[src]'))
                       .map(img => img.src)
-                      .filter(src => !src.includes('icone/exit.png'));
+                      .filter(src => !src.includes('icones/exit.png'));
 
   // Choisir une image au hasard ou image par défaut
   let imgChoisie;
@@ -168,7 +168,7 @@ const toutesImages = [];
 
 document.querySelectorAll('.galerie_lightbox').forEach(lightbox => {
   const images = Array.from(lightbox.querySelectorAll('img[src]'))
-                      .filter(img => !img.src.includes('icone/exit.png'));
+                      .filter(img => !img.src.includes('icones/exit.png'));
   if (images.length > 0) {
     images.forEach(img => toutesImages.push(img.src));
   }
