@@ -149,7 +149,7 @@ document.querySelectorAll('.galerie_onglet > div').forEach(dossier => {
     const randomIndex = Math.floor(Math.random() * images.length);
     imgChoisie = images[randomIndex];
   } else {
-    imgChoisie = 'photo/camera.png';
+    imgChoisie = 'images/camera.png';
   }
 
   // Appliquer en background au h4
