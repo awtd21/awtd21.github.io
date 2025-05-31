@@ -91,9 +91,6 @@ h4{
   text-align: center;
   text-decoration: none;
 }
-.first_letter{
-  color: #B1F500;
-}
 .menu {
   display: flex;
   justify-content: center;
@@ -180,9 +177,9 @@ h4{
  .photo-accueil::-webkit-scrollbar {
   display: none;              /* Chrome, Safari et Opera */
 } 
-.photo-accueil > img{
+.photo-accueil img{
   max-width:31vw;
-	height: auto;
+	height: 31vw;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
@@ -340,6 +337,40 @@ h4{
   }
   .bouton_ouv_ferm_menu{
     display: none;
+  }
+}
+@media (max-width : 768px){
+  #titre_accueil_avt{
+    display: none;
+  }
+  #titre_accueil_apr{
+    display: block;
+  }
+  .image_accueil_problème{
+    object-position: top;
+  }
+  .photo-accueil img{
+    aspect-ratio: 1/1;
+    max-width :31vw;
+    height: 31vw;
+    object-fit: cover;
+  }
+}
+@media (min-width: 769px){
+  .photo-accueil img{
+    aspect-ratio: 1/1;
+    max-width :31vw;
+    height: 31vw;
+    object-fit: cover;
+  }
+  #titre_accueil_apr{
+    display: none;
+  }
+  #titre_accueil_avt{
+    display: block;
+  }
+  .image_accueil_problème{
+    object-position: top;
   }
 }
 @media (min-width:600px){
