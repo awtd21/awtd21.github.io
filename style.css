@@ -239,7 +239,10 @@ h4{
     font-size: 3vmin;
   }
   .photo-accueil img{
-    max-width: 80vw;
+    aspect-ratio: 1/1;
+    max-width :80vw;
+    height: 80vw;
+    object-fit: cover;
   }
   .arrow a img{
     width: 10vmin !important;
@@ -323,7 +326,10 @@ h4{
 }
 @media (min-width:600px) and (max-width: 768px) {
   .photo-accueil img{
-    max-width: 45vw;
+    aspect-ratio: 1/1;
+    max-width :45vw;
+    height: 45vw;
+    object-fit: cover;
   }
   .arrow{
     top: 50%;
@@ -343,20 +349,8 @@ h4{
   #titre_accueil_apr{
     display: block;
   }
-  .photo-accueil img{
-    aspect-ratio: 1/1;
-    max-width :31vw;
-    height: 31vw;
-    object-fit: cover;
-  }
 }
 @media (min-width: 769px){
-  .photo-accueil img{
-    aspect-ratio: 1/1;
-    max-width :31vw;
-    height: 31vw;
-    object-fit: cover;
-  }
   #titre_accueil_apr{
     display: none;
   }
