@@ -33,24 +33,37 @@
 		<div class="corps_contenu">
 			<h2>Galeries</h2>
 			<div class="galerie">
+				<img src="" id="image_accueil_galerie" alt="photo galerie">
 				<div class="galerie_onglet">
-					<h4 onclick="openLightboxGalerie()">Entraînement Parc de la Fontaine aux Fées</h4>
-					<a href="javascript:void(0)"><img src="images/galeries/IMG_4349.JPG" onclick="openLightboxGalerie()" alt="photo galerie"></a>
-					<div class="galerie_lightbox"> 
-						<a href="javascript:void(0)"><img src="images/icones/exit.png" id="bouton_exit" onclick="closeLightboxGalerie()"></a>
-						<div class="colonne_image">
-							<img src="images/galeries/IMG_4354.JPG" alt="photo galerie">
-							<img loading="lazy" src="images/galeries/IMG_4365.JPG" alt="photo galerie">
-							<img loading="lazy" src="images/galeries/IMG_4355.JPG" alt="photo galerie">
+					<div style="justify-content: right;">
+						<h3 style="margin: 0;">Souvenirs en images</h3>
+						<p>(Sélectionnez un album pour découvrir davantage d’images)</p>
+					</div>
+					<div>
+						<h4 onclick="openLightboxGalerie(this)">Entraînement Parc de la Fontaine aux Fées</h4>
+						<div class="galerie_lightbox"> 
+							<a href="javascript:void(0)"><img src="images/icones/exit.png" id="bouton_exit" onclick="closeLightboxGalerie(this)"></a>
+							<div class="colonne_image">
+								<img src="images/galeries/IMG_4354.JPG" alt="photo galerie">
+								<img loading="lazy" src="images/galeries/IMG_4365.JPG" alt="photo galerie">
+								<img loading="lazy" src="images/galeries/IMG_4355.JPG" alt="photo galerie">
+							</div>
+							<div class="colonne_image">
+								<img src="images/galeries/IMG_4349.JPG" alt="photo galerie">
+								<img loading="lazy" src="images/galeries/IMG_4366.JPG" alt="photo galerie">
+								<img loading="lazy" src="images/galeries/IMG_4364.JPG" alt="photo galerie">
+							</div>
+							<div class="colonne_image">
+								<img src="images/galeries/IMG_4363.JPG" alt="photo galerie">
+								<img loading="lazy" src="images/galeries/IMG_4367.JPG" alt="photo galerie">
+							</div>
 						</div>
-						<div class="colonne_image">
-							<img src="images/galeries/IMG_4349.JPG" alt="photo galerie">
-							<img loading="lazy" src="images/galeries/IMG_4366.JPG" alt="photo galerie">
-							<img loading="lazy" src="images/galeries/IMG_4364.JPG" alt="photo galerie">
-						</div>
-						<div class="colonne_image">
-							<img src="images/galeries/IMG_4363.JPG" alt="photo galerie">
-							<img loading="lazy" src="images/galeries/IMG_4367.JPG" alt="photo galerie">
+					</div>
+					<div>
+						<h4 onclick="openLightboxGalerie(this)">Rentrée 2025</h4>
+						<div class="galerie_lightbox"> 
+							<a href="javascript:void(0)"><img src="images/icones/exit.png" id="bouton_exit" onclick="closeLightboxGalerie(this)"></a>
+							<p style="color: white;font-weight: bold; ; font-size: 5vmin; position: fixed;">Ce dossier se prépare. À découvrir très bientôt !</p>
 						</div>
 					</div>
 				</div>
