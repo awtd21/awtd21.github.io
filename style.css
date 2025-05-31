@@ -159,7 +159,6 @@ h4{
 	height: auto;
 }
 .image_accueil_probleme{
-  object-fit: contain;
   object-position: top;
 }
 .photo-accueil{
@@ -348,7 +347,6 @@ h4{
     display: block;
   }
   .image_accueil_probleme{
-    object-fit: contain;
     object-position: top;
   }
   .photo-accueil img{
@@ -372,7 +370,6 @@ h4{
     display: block;
   }
   .image_accueil_probleme{
-    object-fit: contain;
     object-position: top;
   }
 }
